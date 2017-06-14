@@ -9,11 +9,12 @@ GUEST_IP='10.0.0.200'
 
 # Adding an entry here executes the corresponding .sh file in MODULE_PATH
 DEPENDENCIES=(
-    ubuntu
     tools
-    php
-    mysql
+    ubuntu
     apache
+    mysql
+    php
+    js_tools
 )
 
 for MODULE in ${DEPENDENCIES[@]}; do
