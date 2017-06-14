@@ -1,0 +1,12 @@
+# Vagrant files
+#-------------------------
+/.vagrant/
+/sites/*
+!/sites/.gitkeep
+*.log
+
+# IDE/System Files
+#-------------------------
+/nbproject/
+.idea/*
+.DS_Store
