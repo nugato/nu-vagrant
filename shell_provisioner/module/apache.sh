@@ -11,4 +11,9 @@ echo 'Listen 80
       Listen 443
 ' >  /etc/apache2/ports.conf
 
+# Swap for composer
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+sudo /sbin/mkswap /var/swap.1
+sudo /sbin/swapon /var/swap.1
+
 service apache2 restart
