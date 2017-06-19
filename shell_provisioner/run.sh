@@ -12,8 +12,8 @@ DEPENDENCIES=(
     tools
     ubuntu
     apache
-    mysql
     php
+    mysql
     js_tools
 )
 
