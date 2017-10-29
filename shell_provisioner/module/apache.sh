@@ -16,4 +16,11 @@ sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
 sudo /sbin/mkswap /var/swap.1
 sudo /sbin/swapon /var/swap.1
 
+# Install virtualhost management script
+git clone https://github.com/RoverWire/virtualhost
+sed -i -e 's/var\/www/var\/www\/html/g' virtualhost/virtualhost.sh
+sudo chmod +x virtualhost/virtualhost.sh
+sudo cp virtualhost/virtualhost.sh /usr/local/bin/virtualhost
+rm -rf virtualhost
+
 service apache2 restart

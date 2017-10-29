@@ -75,5 +75,6 @@ Technical Details
 * Composer
 * Phpmyadmin
 * Selenium server 3.6
+* Virtualhost management script (https://github.com/RoverWire/virtualhost)
 
 The web root is located in the project directory at `var/www/html/` and you can install your files there
