@@ -15,6 +15,7 @@ DEPENDENCIES=(
     php
     mysql
     js_tools
+    selenium
 )
 
 for MODULE in ${DEPENDENCIES[@]}; do

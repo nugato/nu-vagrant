@@ -13,6 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
         end
 
+        nu_config.vm.network "forwarded_port", guest: 8080, host: 8080
         nu_config.vm.synced_folder "sites/", "/var/www/html", type: "nfs", mount_options: ['rw', 'vers=3', 'tcp', 'fsc', 'nolock', 'actimeo=2']
         nu_config.vm.network "private_network", ip: "10.0.0.200"
         nu_config.vm.hostname = "vagrant"
